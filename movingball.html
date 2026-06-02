@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Ball</title>
+    <style>
+        body {
+            width: 100px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0%
+        }
+        .moving{
+            width:300px;
+            border-radius: 10px;
+        }
+        .ball {
+            width: 60px;
+            height: 60px;
+            background-color: aqua;
+            border-radius: 50px;
+            position: absolute;
+            top: 120px;
+            animation-name: moveBall;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes moveBall {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="moving">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

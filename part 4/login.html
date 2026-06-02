@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Form</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:bisque;
+        }
+        .login-form{
+            width: 350px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .login-form h2{
+            text-align: center;
+        }
+
+        .login-form input{
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button{
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease,
+                        transform 0.3s ease;
+        }
+
+        .login-form button:hover{
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 480px){
+            .login-form{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="login-form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
